@@ -45,6 +45,7 @@ class SegmentedControl extends StatelessWidget {
                     child: Row(children: [
                       GestureDetector(
                         behavior: HitTestBehavior.opaque,
+                        key: const ValueKey('login_button'),
                         onTap: () => authModule.changeTabIndex(0),
                         child: Container(
                           height: _styles.height,
@@ -68,6 +69,7 @@ class SegmentedControl extends StatelessWidget {
                       ),
                       GestureDetector(
                         behavior: HitTestBehavior.opaque,
+                        key: const ValueKey('signup_button'),
                         onTap: () => authModule.changeTabIndex(1),
                         child: Container(
                           height: _styles.height,

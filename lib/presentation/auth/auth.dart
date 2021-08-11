@@ -47,12 +47,14 @@ class AuthPage extends StatelessWidget {
                                 validator: _auth.validateEmail,
                                 onChanged: _auth.changeEmail,
                                 hintText: 'Email',
+                                key: const ValueKey('email_textfield'),
                               ),
                               const Divider(color: AppThemes.transparent),
                               AppTextField(
                                 validator: _auth.validatePassword,
                                 onChanged: _auth.changePassword,
                                 hintText: 'Password',
+                                key: const ValueKey('password_textfield'),
                               ),
                               const Divider(color: AppThemes.transparent),
                               SizedBox(
