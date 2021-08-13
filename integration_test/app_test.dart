@@ -34,7 +34,7 @@ main() {
       await test.tap(find.byKey(ValueKey('signup_button')));
 
       // Wait for animations to complete
-      await test.pumpAndSettle();
+      await test.pumpAndSettle(Duration(seconds: 1));
 
       // Find expected Widgets and texts.
       expect(find.byType(HomePage), findsOneWidget);
@@ -64,12 +64,12 @@ main() {
       await test.tap(find.byKey(ValueKey('login_button')));
 
       // Wait for animations to complete
-      await test.pumpAndSettle();
+      await test.pumpAndSettle(Duration(seconds: 1));
 
       // Fing expected Widgets and texts.
-      expect(find.byType(HomePage), findsOneWidget);
       expect(find.byType(AuthPage), findsNothing);
       expect(find.text(_email), findsOneWidget);
+      expect(find.byType(HomePage), findsOneWidget);
     },
   );
 }
